@@ -1,0 +1,760 @@
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.main {
+  height: 1000vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: hidden;
+  background-color: transparent;
+}
+
+.menuBar {
+  height: 5%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(74, 74, 74, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.threeDt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstDt {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: red;
+  margin: 5px;
+}
+
+.secDt {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: yellow;
+  margin: 5px;
+}
+
+.thirdDt {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: green;
+  margin: 5px;
+}
+
+.cText {
+  font-size: 10px;
+  font-family: "Grape Nuts", cursive;
+}
+
+.hamB {
+  cursor: pointer;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  text-align: right;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.overlay a {
+  margin-right: 20px;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  font-size: 40px;
+}
+
+.pImg {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url(images/pImages/MBgA1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.pImgTxtHover {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  color: rgb(142, 142, 142);
+  /* background-color: rgb(0,0,0,0.5); */
+}
+
+.pImgTxtHover:hover {
+  color: white;
+  /* background-color: rgba(0,0,0,0.6); */
+}
+
+.pImgTxtHoverSm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 15px;
+  word-spacing: 10px;
+}
+
+.pImgTxtHoverLg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 48px;
+  line-height: 54px;
+}
+
+.pIntro {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* overflow-y:  hidden; */
+}
+
+.pIntroImg {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pIntroImgCont {
+  height: 80%;
+  width: 80%;
+  background-image: url(images/pImages/pIntroImg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.pIntroTxt {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 50%;
+}
+
+.pIntroTxtHeader {
+  justify-content: center;
+  /* align-items: center; */
+  font-size: 30px;
+  margin: 75px 0 30px 0;
+}
+
+.pIntroTxtContnt {
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin: 0 0 20px 0;
+}
+
+.pIntroTxtAbtMeBtn {
+  justify-content: left;
+  align-items: center;
+  font-size: 10px;
+}
+
+.pIntroTxtAbtMeBtn button {
+  padding: 15px;
+  margin: 75px 0px 20px 0px;
+  color: white;
+  background: black;
+}
+
+.pGallery {
+  height: 315vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pGalleryHeading {
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Creating four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 30%;
+  padding: 0 8px;
+  transition: all 0.2s ease-in-out;
+  background-size: cover;
+}
+
+.column img {
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.slideshowContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  /* align-items: center; */
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  background: black;
+  color: white;
+}
+
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+q {
+  font-style: italic;
+  font-size: 30px;
+}
+
+.author {
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 10px;
+  word-spacing: 10px;
+}
+
+.pServiceSection {
+  display: flex;
+  flex-direction: column;
+  height: 110vh;
+  width: 100%;
+}
+
+.pServiceSectionHeading {
+  font-size: 30px;
+  margin-left: 12%;
+  margin-top: 10%;
+}
+
+.pServiceSectionContentCont {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.pServiceSectionContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 40%;
+  padding: 10px;
+  margin-left: 10%;
+}
+
+.pSSCRow {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.pSSCRColumn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 500ms, color 2000ms;
+}
+
+.pSSCRColumn:hover {
+  background-color: black;
+  color: white;
+}
+
+.pSSCRColumn:hover .columnFavIcon i {
+  color: white !important;
+  transition: color 2000ms;
+}
+
+.columnFavIcon {
+  margin: 20px;
+  height: 30%;
+  display: flex;
+  align-items: end;
+}
+
+.columnServName {
+  margin: 10px;
+  height: 10%;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.columnServElab {
+  margin: 10px;
+  height: 60%;
+}
+
+.pServiceSectionPImg {
+  height: 95%;
+  width: 40%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.pServiceSectionPImgPhoto {
+  background-image: url(images/pImages/ashFav.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 80%;
+}
+
+.contactFormContainer {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  border: 1px solid white;
+  margin-top: 70px;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 99%;
+  background-color: black;
+  color: white;
+}
+
+.contactContainer__leftSection,
+.contactContainer__rightSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+}
+
+.contactContainer__leftSection p {
+  font-size: 30px;
+}
+
+.contactContainer__rightSection form {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.formRow input,
+.formRow textarea,
+.formRow button {
+  padding: 15px;
+  font-size: 16px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.formRow input[type="text"],
+.formRow input[type="email"] {
+  margin-right: 0px;
+}
+
+.formRow input[type="email"]{
+  margin-left: 10px;
+}
+
+.formRow textarea{
+  width: 100%;
+}
+
+.formRow button {
+  width: 40%;
+  margin-top: 10px;
+  background-color: white;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.formRow button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.pFooter{
+  height: 20vh;
+  width: 100%;
+  background: black;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  .contactContainer__leftSection,
+  .contactContainer__rightSection {
+    padding: 10px;
+  }
+
+  .contactContainer__leftSection p {
+    font-size: 16px;
+  }
+
+  .formRow input,
+  .formRow textarea,
+  .formRow button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .formRow input,
+  .formRow textarea,
+  .formRow button {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .overlay a {
+    font-size: 17px;
+    margin: 10px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: -21px;
+    right: 85px;
+    left: 0;
+  }
+
+  .pImgTxtHover {
+    width: 90%;
+    display: flex;
+    top: 20%;
+    flex-direction: column;
+    position: absolute;
+    color: rgb(142, 142, 142);
+  }
+
+  .pImgTxtHoverSm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    word-spacing: 7px;
+  }
+
+  .pImgTxtHoverLg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 32px;
+    line-height: 54px;
+  }
+
+  .pIntro {
+    display: flex;
+    top: 0;
+    flex-direction: column-reverse;
+    position: relative;
+    z-index: -1;
+    padding: 0px;
+  }
+
+  .pIntroImg {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+  }
+
+  .pIntroImgCont {
+    border-radius: 10%;
+  }
+
+  .pIntroTxt {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .pIntroTxtHeader {
+    justify-content: left;
+    font-size: 15px;
+    margin: 75px 0 30px 0;
+  }
+
+  .pIntroTxtContnt {
+    font-size: 8px;
+  }
+
+  .pIntroTxtAbtMeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pIntroTxtAbtMeBtn button {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .pServiceSection {
+    height: 150vh;
+  }
+
+  .pServiceSectionHeading {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pServiceSectionContentCont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pServiceSectionContent {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .pServiceSectionPImg {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .overlay .closebtn {
+    font-size: 40px;
+    top: -21px;
+    right: 85px;
+    left: 0;
+  }
+
+  .pGallery {
+    height: 110vh;
+  }
+
+  .pGalleryHeading {
+    font-size: 15px;
+  }
+
+  .column {
+    flex: 25%;
+    max-width: 50%;
+  }
+
+  .slideshowContainer {
+    height: 45vh;
+  }
+
+  q {
+    font-size: 20px;
+  }
+
+  .author {
+    font-size: 10px;
+    letter-spacing: 5px;
+    word-spacing: 8px;
+    margin-top: 10px;
+  }
+
+  .pServiceSection {
+    height: 150vh;
+  }
+
+  .pServiceSectionHeading {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pServiceSectionContentCont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pServiceSectionContent {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .pServiceSectionPImg {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .overlay .closebtn {
+    font-size: 40px;
+    top: -21px;
+    right: 85px;
+    left: 0;
+  }
+
+  .pGalleryHeading {
+    font-size: 15px;
+  }
+
+  .column {
+    flex: 25%;
+    max-width: 50%;
+  }
+
+  .pGallery {
+    height: 110vh;
+  }
+
+  .slideshowContainer {
+    height: 45vh;
+  }
+
+  q {
+    font-size: 20px;
+  }
+
+  .author {
+    font-size: 10px;
+    letter-spacing: 5px;
+    word-spacing: 8px;
+    margin-top: 10px;
+  }
+
+  .pServiceSection {
+    height: 150vh;
+  }
+
+  .pServiceSectionHeading {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pServiceSectionContentCont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pServiceSectionContent {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .pServiceSectionPImg {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+}

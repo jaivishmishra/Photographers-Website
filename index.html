@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="images/pImages/ashFav.jpg"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f02f7fa72a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <title>Ashy Shots - Your Photography Solution</title>
+  </head>
+  <body>
+    <div class="main" id="main">
+      <div class="menuBar">
+        <div class="threeDt">
+          <div class="firstDt"></div>
+          <div class="secDt"></div>
+          <div class="thirdDt"></div>
+        </div>
+        <div class="cText"><h1>Welcome</h1></div>
+        <span class="hamB" onclick="openNav()"
+          ><i class="fa-solid fa-bars fa-lg" style="color: #000000"></i
+        ></span>
+      </div>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="#main">Home</a>
+          <a href="#pIntro">About Me</a>
+          <a href="cnt.html">Contact</a>
+        </div>
+      </div>
+      <div class="pImg"></div>
+      <div class="pImgTxtHover">
+        <div class="pImgTxtHoverSm">Photography Solution</div>
+        <div class="pImgTxtHoverLg">Anuj Sharma Photography</div>
+      </div>
+      <div id="pIntro" class="pIntro">
+        <div class="pIntroImg">
+          <div class="pIntroImgCont"></div>
+        </div>
+        <div class="pIntroTxt">
+          <div class="pIntroTxtHeader">
+            <h1>Hi, I'm Anuj. Your upcoming brand photographer from Tezu.</h1>
+          </div>
+          <div class="pIntroTxtContnt">
+            <h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+              perferendis aspernatur vitae non delectus eum unde libero
+              similique suscipit adipisci hic quibusdam, praesentium corrupti
+              odit debitis doloremque cupiditate porro expedita dolorum
+              voluptates. Perferendis, fuga? Tenetur placeat, ipsum, omnis nisi
+              non dicta praesentium nesciunt, laudantium doloremque excepturi
+              esse facere aliquid perspiciatis. ipsum dolor sit amet consectetur
+              adipisicing elit. Libero neque ut labore? Dolorem amet officia
+              neque maxime eum, mollitia soluta reprehenderit at voluptas nemo
+              quas itaque id, voluptate, iste distinctio. Cupiditate, tempora
+              molestiae? Placeat iusto minima perferendis magni repellendus
+              labore, quasi cumque corrupti commodi soluta illo quibusdam sit
+              veritatis! Eaque.
+            </h2>
+          </div>
+          <div class="pIntroTxtAbtMeBtn"><button>More About Me</button></div>
+        </div>
+      </div>
+      <div class="pGallery" id="pGallery">
+        <div class="pGalleryHeading"><h1>Gallery</h1></div>
+        <div class="row">
+          <div class="column">
+            <img src="images/galleryImages/mountain.jpeg" />
+            <img src="images/galleryImages/riverSide.jpeg" />
+            <img src="images/galleryImages/lights.jpg" />
+            <img src="images/galleryImages/landscape.jpg" />
+          </div>
+          <div class="column">
+            <img src="images/galleryImages/landscape.jpg" />
+            <img src="images/galleryImages/lights.jpg" />
+            <img src="images/galleryImages/mountain.jpeg" />
+            <img src="images/galleryImages/riverSide.jpeg" />
+          </div>
+          <div class="column">
+            <img src="images/galleryImages/lights.jpg" />
+            <img src="images/galleryImages/landscape.jpg" />
+            <img src="images/galleryImages/riverSide.jpeg" />
+            <img src="images/galleryImages/mountain.jpeg" />
+          </div>
+        </div>
+      </div>
+      <div class="slideshowContainer">
+        <div class="mySlides" id="q0">
+          <q>
+            I love you the more in that I believe you had liked me for my own
+            sake and for nothing else</q
+          >
+          <p class="author">- John Keats</p>
+        </div>
+        <div class="mySlides" id="q1">
+          <q>
+            But man is not made for defeat. A man can be destroyed but not
+            defeated.</q
+          >
+          <p class="author">- Ernest Hemingway</p>
+        </div>
+        <div class="mySlides" id="q2">
+          <q>
+            I have not failed. I've just found 10,000 ways that won't work.</q
+          >
+          <p class="author">- Thomas A. Edison</p>
+        </div>
+        <span class="prev" onclick="plusSlides(-1)"
+          ><i class="fa-solid fa-arrow-left fa-lg" style="color: #fff"></i
+        ></span>
+        <span class="next" onclick="plusSlides(1)"
+          ><i class="fa-solid fa-arrow-right fa-lg" style="color: #fff"></i
+        ></span>
+      </div>
+      <div class="pServiceSection">
+        <div class="pServiceSectionHeading"><h1>Services</h1></div>
+        <div class="pServiceSectionContentCont">
+          <div class="pServiceSectionContent">
+            <div class="pSSCRow">
+              <div class="pSSCRColumn">
+                <div class="columnFavIcon"><i class="fa-solid fa-camera-retro fa-2xl" style="color: #000000;"></i></div>
+                <div class="columnServName">Photography</div>
+                <div class="columnServElab">The thing I like to do the most and where I'm currently specialized in</div>
+              </div>
+              <div class="pSSCRColumn">
+                <div class="columnFavIcon"><i class="fa-solid fa-wand-magic-sparkles fa-2xl" style="color: #000000;"></i></div>
+                <div class="columnServName">Editing</div>
+                <div class="columnServElab">I only use the best gear possible to make sure you get the best photographs</div>
+              </div>
+            </div>
+            <div class="pSSCRow">
+              <div class="pSSCRColumn">
+                <div class="columnFavIcon"><i class="fa-solid fa-pen-nib fa-2xl" style="color: black;"></i></div>
+                <div class="columnServName">Writing</div>
+                <div class="columnServElab">Crafting worlds with ink, weaving dreams into pages of eternity.</div>
+              </div>
+              <div class="pSSCRColumn">
+                <div class="columnFavIcon"><i class="fa-solid fa-film fa-2xl" style="color: #000000;"></i></div>
+                <div class="columnServName">Cinematography</div>
+                <div class="columnServElab">Through lenses, orchestrating light and shadow to unveil stories in frames, a cinematographer paints motion's poetry.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pServiceSectionPImg">
+            <div class="pServiceSectionPImgPhoto"></div>
+          </div>
+        </div>
+      </div>
+      <div class="contactFormContainer">
+        <div class="contactContainer">
+          <div class="contactContainer__leftSection">
+            <h1>Need some beautiful portraits?<br>Let's work together!</h1>
+          </div>
+          <div class="contactContainer__rightSection">
+            <form action="https://formspree.io/f/mleqjbrj" method="POST">
+              <div class="formRow">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+              </div>
+              <div class="formRow">
+                <textarea name="message" placeholder="Message" required></textarea>
+              </div>
+              <div class="formRow">
+                <button type="submit">Let's work together</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="pFooter"></div>
+    </div>
+  </body>
+</html>
